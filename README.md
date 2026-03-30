@@ -1,34 +1,38 @@
-# NeuroStudy-prd
-Ürün Özeti NeuroStudy, 7-26 yaş arası öğrencilerin akademik metinleri okurken yaşadığı "bilişsel yorgunluğu" ve "odak kaybını" yapay zeka (Gemini API) ile çözen web tabanlı bir uygulamadır. Kullanıcı yaşını seçer, metni yapıştırır; AI metni o yaşa uygun analojilerle, parçalara bölünmüş ve etkileşimli bir formatta sunar.
+Problem
+Eğitim materyalleri genellikle statik ve tek tip sunulur; bu durum, yoğun bilgi yükü altında odaklanma güçlüğü yaşayan 7-26 yaş arası bireyler için büyük bir bilişsel bariyer oluşturur. Mevcut sistemler kullanıcının zihinsel yorgunluğunu fark etmez, bu da öğrencinin konudan kopmasına ve öğrenme motivasyonunu kaybetmesine neden olur.
 
-Kullanıcı Akışı (User Flow) Hoş Geldin Ekranı: Kullanıcıdan iki bilgi istenir: Adı ve Yaşı (7-26 aralığı).
+Çözüm
+NeuroStudy, yapay zekayı (Gemini API) bir "bilişsel antrenör" olarak konumlandırarak statik metinleri kullanıcının yaşına ve anlama kapasitesine göre dinamik olarak yeniden yapılandırır.
 
-Input Paneli: Kullanıcı anlamakta zorlandığı ders notunu veya makaleyi yapıştırır.
+Age-Adaptive Engine: Metni kullanıcının yaş grubuna göre saniyeler içinde basitleştirir veya derinleştirir.
 
-Analiz Süreci: "Odaklan" butonuna basılır. AI arka planda metni analiz eder.
+Bilişsel Bölümleme: Uzun içerikleri odak süresine uygun, "yutulabilir" parçalara ayırır.
 
-Okuma Stüdyosu: Ekran ikiye bölünür. Sol tarafta orijinal metin, sağ tarafta AI'nın "Nöro-Dostu" (parçalanmış, kalınlaştırılmış, basitleştirilmiş) versiyonu.
+Sokratik Sorgulama: Her bölüm sonunda AI, bağlamsal sorularla aktif öğrenmeyi tetikler.
 
-Check-point: Her 3 paragrafta bir AI durur ve yaşa uygun bir soru sorar.
+Canlı Demo
+🚀 Yayın Linki:https://project-neuro-study.lovable.app
 
-Temel Özellikler (MVP Kapsamı) Age-Adaptive Engine: * Çocuk (7-12): Masalsı dil, oyun analojileri, çok kısa cümleler.
-Genç (13-18): Sınav odaklı, günlük hayat örnekleri, orta uzunlukta cümleler.
+🎥 Demo Videosu: [Buraya Loom veya YouTube Linkini Yapıştır]
 
-Üniversite (19-26): Akademik ama akıcı dil, sektörel/mantıksal analojiler.
+Kullanılan Teknolojiler
+Frontend: React, Tailwind CSS (Modern ve duyarlı arayüz)
 
-Bionic Reading: Kelimelerin ilk harflerinin kalın (bold) yapılması.
+AI Engine: Google Gemini 1.5 Flash API (Hızlı bilişsel analiz ve pedagojik adaptasyon)
 
-Smart Pop-ups: Ağır terimlerin (Termodinamik, Enflasyon vb.) üzerine tıklandığında yaşa uygun "Bunu şöyle düşün..." kutucukları.
+Deployment: Lovable (Hızlı prototipleme ve hosting)
 
-Confidence Feedback: Yanlış cevapta bile "Harika bir deneme! Bir de şu açıdan bak..." diyen empatik metinler.
+Tasarım: Soft Cream UI (#FFFDF5) - Göz yorgunluğunu azaltan odak odaklı tasarım.
 
-Tasarım Gereksinimleri (UI/UX) Renk Paleti: Göz yormayan "Soft Cream" arka plan (#FFFDF5), koyu gri metinler (#333333).
-Font: Okunabilirliği yüksek "Inter" veya "Open Sans".
+Nasıl Çalıştırılır?
+Bu depoyu (repository) bilgisayarınıza klonlayın: git clone [repo-linki]
 
-Sadelik: Karmaşık menüler yok. Sadece metin ve okuma alanı.
+Proje klasörüne gidin: cd NeuroStudy.prd
 
-Teknik Detaylar (Kodsuz Araçlar İçin) Frontend: React / Tailwind CSS (Lovable üzerinden üretilecek).
-AI Integration: Google Gemini 1.5 Flash API (Hızlı ve düşük maliyetli).
+Gerekli bağımlılıkları yükleyin: npm install
 
-Prompt Logic: AI'ya gönderilecek komut şablonu: "Sen uzman bir pedagogsun. Aşağıdaki metni [YAŞ] yaşındaki bir öğrenci için basitleştir, parçalara böl ve [ANALOJİ TÜRÜ] kullanarak açıkla."
+Uygulamayı başlatın: npm run dev
+
+Tarayıcınızda localhost:5173 adresini ziyaret edin.
+
 
