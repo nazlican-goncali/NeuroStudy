@@ -1,3 +1,8 @@
+Mükemmel bir PRD akışı oldu Nazlıcan. Mevcut çalışan uygulamadaki Dark Mode (Karanlık Mod) ve Bilişsel Ergonomi detaylarını da teknik gereksinimlere profesyonel bir dille ekledim. Bu doküman, 31 Mart jürisine projenin teknik ve mantıksal olarak ne kadar sağlam temellere oturduğunu kanıtlayacak.
+
+İşte en güncel ve kapsamlı prd.md içeriğin:
+
+📄 NeuroStudy - Product Requirements Document (PRD) v2.1
 1. Ürün Özeti (Executive Summary)
 NeuroStudy, 7-26 yaş arası öğrencilerin akademik metinleri okurken yaşadığı "bilişsel yorgunluğu" ve "odak kaybını" yapay zeka (Gemini API) ile çözen, kişiselleştirilmiş bir bilişsel okuma asistanıdır. Statik ve tek tip metinleri; kullanıcının yaşına uygun analojilerle yeniden yapılandırır, parçalara böler ve interaktif bir öğrenme yolculuğuna dönüştürür.
 
@@ -27,24 +32,25 @@ Genç (13-18): Sınav odaklı (LGS/YKS), günlük hayat örnekleri, motivasyonel
 
 Bionic Reading Entegrasyonu: Kelimelerin ilk harflerinin kalın (bold) yapılmasıyla gözün metin üzerinde daha hızlı ve odaklı kaymasını sağlayan görsel mod.
 
+Adaptive Theme (Dark Mode): Gündüz kullanımı için "Soft Cream" (#FFFDF5), gece kullanımı ve uzun süreli okumalar için göz yorgunluğunu önleyen tam uyumlu Dark Mode desteği.
+
 Smart Pop-ups: Metin içindeki ağır terimlerin üzerine tıklandığında, yaş grubuna özel "Bunu şöyle düşün..." açıklamaları.
 
 Empatik Geri Bildirim (Confidence AI): Yanlış cevaplarda bile öğrencinin çabasını ödüllendiren, "Harika bir deneme!" gibi motivasyonel ve yönlendirici geri bildirimler.
 
 4. Tasarım Gereksinimleri (UI/UX)
-Renk Paleti: Göz yorgunluğunu minimize eden "Soft Cream" arka plan (#FFFDF5) ve yüksek kontrastlı koyu gri metinler (#333333).
+Renk Paleti: Bilişsel ergonomi odaklı, kontrastı dengelenmiş Gündüz/Gece modları.
 
 Tipografi: Okunabilirliği maksimize eden "Inter" veya "Open Sans" font ailesi.
 
-Minimalizm: Karmaşık menülerden arındırılmış, sadece metne ve öğrenmeye odaklanan "Clean-UI" felsefesi.
+Sadelik (Clean-UI): Karmaşık menülerden arındırılmış, sadece metne ve öğrenmeye odaklanan minimal arayüz.
 
-5. Teknik Altyapı
+5. Teknik Altyapı ve AI Mantığı
 Frontend: React / Tailwind CSS (Lovable altyapısı ile optimize edilmiş).
 
-AI Engine: Google Gemini 1.5 Flash (Düşük gecikme süresi ve yüksek anlama kapasitesi).
+AI Engine: Google Gemini 1.5 Flash API (Hızlı yanıt süresi ve düşük token maliyeti).
 
-Prompt Stratejisi: "Sen uzman bir pedagog ve bilişsel antrenörsün. [YAŞ] yaşındaki bir öğrenci için metni [ANALOJİ] kullanarak, parçalara bölünmüş şekilde yeniden kurgula."
-
+Prompt Logic: AI'ya gönderilecek sistem talimatı: "Sen uzman bir pedagog ve bilişsel antrenörsün. Aşağıdaki metni [YAŞ] yaşındaki bir öğrenci için basitleştir, parçalara böl ve [ANALOJİ TÜRÜ] kullanarak açıkla. Metnin ruhunu bozma ama dilini tamamen adapte et."
 AI Integration: Google Gemini 1.5 Flash API (Hızlı ve düşük maliyetli).
 
 Prompt Logic: AI'ya gönderilecek komut şablonu: "Sen uzman bir pedagogsun. Aşağıdaki metni [YAŞ] yaşındaki bir öğrenci için basitleştir, parçalara böl ve [ANALOJİ TÜRÜ] kullanarak açıkla."
